@@ -1,0 +1,16 @@
+{
+    "name": "rtgroup/snia-reporting",
+    "description": "Composant permettant de générer et extraire un rapport snia.",
+    "autoload": {
+        "psr-4": {
+            "Rtgroup\\SniaReporting\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Tenday",
+            "email": "ctenday@gmail.com"
+        }
+    ],
+    "require": {}
+}
