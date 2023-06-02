@@ -1,6 +1,8 @@
 <?php
 namespace Rtgroup\SniaReporting;
 
+use Cultures;
+
 class Reporting
 {
     private $db;
@@ -32,6 +34,7 @@ class Reporting
         /**
          * Cultures data.
          */
+        require_once "./data/Cultures.php";
         $cultures=new Cultures($this->db);
         $this->data['cultures']=$cultures->get();
     }
