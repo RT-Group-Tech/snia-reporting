@@ -13,6 +13,6 @@
         }
     ],
     "require": {
-        "chris-tenday/pdf-generator": "dev-master"
+        "chris-tenday/pdf-generator": "^1.0"
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3181fce1a474cc7c3fa6446c9beb14f6",
+    "content-hash": "a7880a121b043cca268e2844270fd55c",
     "packages": [
         {
             "name": "aspose/words-sdk-php",
@@ -101,7 +101,7 @@
         },
         {
             "name": "chris-tenday/pdf-generator",
-            "version": "dev-master",
+            "version": "V1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RT-Group-Tech/pdf-generator.git",
@@ -117,7 +117,6 @@
                 "aspose/words-sdk-php": "^23.4",
                 "phpoffice/phpword": "^1.1"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -134,7 +133,7 @@
             "description": "Composant pour générer un pdf à partir d'un document word template.",
             "support": {
                 "issues": "https://github.com/RT-Group-Tech/pdf-generator/issues",
-                "source": "https://github.com/RT-Group-Tech/pdf-generator/tree/master"
+                "source": "https://github.com/RT-Group-Tech/pdf-generator/tree/V1.0.1"
             },
             "time": "2023-06-01T17:33:26+00:00"
         },
@@ -1135,9 +1134,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "chris-tenday/pdf-generator": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
