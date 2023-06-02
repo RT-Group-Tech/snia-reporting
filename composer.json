@@ -12,5 +12,7 @@
             "email": "ctenday@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "chris-tenday/pdf-generator": "dev-master"
+    }
 }
