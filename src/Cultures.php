@@ -1,5 +1,5 @@
 <?php
-
+namespace Rtgroup\SniaReporting;
 
 class Cultures extends Data
 {
