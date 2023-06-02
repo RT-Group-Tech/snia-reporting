@@ -34,7 +34,6 @@ class Reporting
         /**
          * Cultures data.
          */
-        require_once "./data/Cultures.php";
         $cultures=new Cultures($this->db);
         $this->data['cultures']=$cultures->get();
     }
