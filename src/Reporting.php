@@ -19,7 +19,7 @@ class Reporting
      */
     public function generate()
     {
-        $this->prepapreData();
+        $this->prepareData();
 
         echo "result:\n";
         print_r($this->data);
@@ -29,7 +29,7 @@ class Reporting
     /**
      * Method pour preparer les données
      */
-    private function prepapreData()
+    private function prepareData()
     {
         /**
          * Cultures data.
