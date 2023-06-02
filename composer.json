@@ -3,7 +3,7 @@
     "description": "Composant permettant de générer et extraire un rapport snia.",
     "autoload": {
         "psr-4": {
-            "Rtgroup\\SniaReporting\\": "src"
+            "Rtgroup\\SniaReporting\\": "src/"
         }
     },
     "authors": [
