@@ -21,8 +21,7 @@ class Reporting
     {
         $this->prepareData();
 
-        echo "result:\n";
-        print_r($this->data);
+        return $this->data;
 
     }
 
