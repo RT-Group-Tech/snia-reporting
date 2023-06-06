@@ -13,25 +13,24 @@ class Cultures extends Data
             ->joinWhere("collectes","formulaire_id","=",33)
             ->executeJoin();
 
-        $factor=[];
+        $factor=array();
         for($i=count($collectes)-1; $i>=0; $i--)
         {
-            $collectes[$i]['input']=str_replace(" ","_",$collectes[$i]['input']);
-            $collectes[$i]['input']=strtolower($collectes[$i]['input']);
-            $collectes[$i]['valeur']=str_replace(" ","_",$collectes[$i]['valeur']);
-            $collectes[$i]['valeur']=strtolower($collectes[$i]['valeur']);
+            $collectes[$i]['input']=$this->formatInput($collectes[$i]['input']);
 
-            if($collectes[$i]['input']=="nom_de_la_spéculation")
+            $collectes[$i]['valeur']=$this->formatInput($collectes[$i]['valeur']);
+
+            if($this->equals($collectes[$i]['input'],"nom_de_la_spéculation"))
             {
                 if(array_key_exists($collectes[$i]['valeur'],$factor))
                 {
                     continue;
                 }
-
+                //TODO:Rearrange and Cluster data set by culture.
                 $culture=array(
-                    "menage_agricole"=>$this->getMenageAgricole($collectes[$i]),
-                    "superficie"=>"0Ha",
-                    "rendement"=>"",
+                    "menage_agricole"=>$this->getMenageAgricole($collectes[$i]['input'],$collectes), //TODO: Bug on calculating menage agricole.
+                    "superficie"=>"-",
+                    "rendement"=>"-",
                     "production"=>"",
                     "distribution"=>"",
                     "importation"=>"",
@@ -48,19 +47,61 @@ class Cultures extends Data
 
     }
 
+    private function formatInput($key)
+    {
+        $input=str_replace(" ","_",$key);
+
+        return $input;
+    }
+
     /**
      * Method pour obtenir le nombre de ménage agricole le plus recent.
      * @param $data
      * @return mixed
      */
-    private function getMenageAgricole($data)
+    private function getMenageAgricole($culture,$data)
     {
-        foreach($data as $key=>$val)
+        for($i=0; $i<count($data); $i++)
         {
+            $key=$this->formatInput($data[$i]['input']);
             if($key=="nombre_de_ménages_agricoles")
             {
-                return $val;
+                $menageAgricole=$data[$i]['valeur'];
+
+                return $menageAgricole;
+
             }
+        }
+
+        return "-";
+    }
+
+    /**
+     * Method pour comparer 2 strings.
+     * @param $str1
+     * @param $str2
+     * @param bool $ignoreCase
+     * @return bool
+     */
+    private function equals($str1,$str2,$ignoreCase=true)
+    {
+        if($ignoreCase)
+        {
+            if(strcasecmp($str1,$str2)==0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        else
+        {
+            if(strcmp($str1,$str2)==0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 
