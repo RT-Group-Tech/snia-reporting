@@ -51,9 +51,7 @@ class Reporting
             $block->setData("exportation",$data['exportation']);
         }
 
-        $pdf->generate();
-
-        return $this->dataSet;
+        return $pdf->generate();
 
     }
 
