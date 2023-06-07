@@ -33,7 +33,7 @@ class Reporting
         $pdf=new Pdf($this->templatePath);
         $pdf->setDestinationFolder($this->destinationPath);
         $pdf->setData("province","Nord-Kivu");
-        $pdf->setData("populationTotal","-");
+        $pdf->setData("populationTotale","-");
         $pdf->setData("cultureCategorie","Vivrière");
 
         $culturesData=$this->dataSet['cultures'];
