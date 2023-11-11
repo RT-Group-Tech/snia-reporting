@@ -16,5 +16,4 @@
         "chris-tenday/pdf-generator": "dev-master"
     },
     "minimum-stability": "dev",
-    "prefer-source": true
 }
