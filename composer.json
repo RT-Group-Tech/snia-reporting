@@ -12,7 +12,14 @@
             "email": "ctenday@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/RT-Group-Tech/pdf-generator.git"
+        }
+    ],
     "require": {
-        "chris-tenday/pdf-generator": "^1.0"
-    }
+        "chris-tenday/pdf-generator": "dev-master"
+    },
+    "minimum-stability": "dev"
 }
